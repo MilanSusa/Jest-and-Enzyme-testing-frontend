@@ -3,6 +3,8 @@ import React from "react";
 const Description = props => {
     return (
         <p className="text-center">
+            <strong>Welcome to Jaet - Jest and Enzyme testing</strong>
+            <br />
             The purpose of this project is to show how React component testing is performed using
             <strong> Jest </strong>
             and
