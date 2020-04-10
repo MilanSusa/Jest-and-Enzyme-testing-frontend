@@ -4,7 +4,9 @@ import Navigation from "../Navigation/Navigation";
 const Layout = props => {
     return (
         <React.Fragment>
-            <Navigation/>
+            <Navigation />
+            <br />
+            <br />
             <br />
             {props.children}
         </React.Fragment>

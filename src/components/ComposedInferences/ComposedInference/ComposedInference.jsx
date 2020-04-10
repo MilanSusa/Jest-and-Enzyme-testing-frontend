@@ -29,11 +29,11 @@ const ComposedInference = props => {
 
     const updatePayload = () => {
         if (props.data.payload.content) {
-            setPayload(<Text data={props.data.payload} />);
+            setPayload(<Text data={props.data.payload}/>);
         }
 
         if (props.data.payload.url) {
-            setPayload(<Image data={props.data.payload} />);
+            setPayload(<Image data={props.data.payload}/>);
         }
     };
 
