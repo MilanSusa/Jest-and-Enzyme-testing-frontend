@@ -7,6 +7,7 @@ import Regressor from "../../Regressors/Regressor/Regressor";
 import Text from "../../Texts/Text/Text";
 import Image from "../../Images/Image/Image";
 import Person from "../../ComposedPersons/Person/Person";
+import Inference from "../../Inferences/Inference/Inference";
 
 const ComposedInference = props => {
     const [model, setModel] = useState(<p><strong>Model</strong></p>);
@@ -42,18 +43,28 @@ const ComposedInference = props => {
             <Card.Body>
                 <Row>
                     <Col>
-                        <p><strong>Inference</strong></p>
-                        <p>ID: {props.data.id}</p>
-                        <p>Result: {props.data.result}</p>
+                        <Inference data={props.data}/>
                     </Col>
                     <Col>
-                        {payload}
+                        <Card>
+                            <Card.Body>
+                                {payload}
+                            </Card.Body>
+                        </Card>
                     </Col>
                     <Col>
-                        <Person data={props.data.person}/>
+                        <Card>
+                            <Card.Body>
+                                <Person data={props.data.person}/>
+                            </Card.Body>
+                        </Card>
                     </Col>
                     <Col>
-                        {model}
+                        <Card>
+                            <Card.Body>
+                                {model}
+                            </Card.Body>
+                        </Card>
                     </Col>
                 </Row>
             </Card.Body>
