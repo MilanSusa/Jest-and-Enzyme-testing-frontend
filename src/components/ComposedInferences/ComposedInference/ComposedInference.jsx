@@ -6,7 +6,7 @@ import Classifier from "../../Classifiers/Classifier/Classifier";
 import Regressor from "../../Regressors/Regressor/Regressor";
 import Text from "../../Texts/Text/Text";
 import Image from "../../Images/Image/Image";
-import Person from "../../ComposedPersons/Person/Person";
+import Person from "../../Persons/Person/Person";
 import Inference from "../../Inferences/Inference/Inference";
 
 const ComposedInference = props => {
