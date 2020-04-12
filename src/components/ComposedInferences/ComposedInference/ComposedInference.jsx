@@ -1,43 +1,13 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 import Card from "react-bootstrap/Card";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Classifier from "../../Classifiers/Classifier/Classifier";
-import Regressor from "../../Regressors/Regressor/Regressor";
-import Text from "../../Texts/Text/Text";
-import Image from "../../Images/Image/Image";
 import Person from "../../Persons/Person/Person";
 import Inference from "../../Inferences/Inference/Inference";
+import PayloadRenderer from "../../PayloadRenderer/PayloadRenderer";
+import ModelRenderer from "../../ModelRenderer/ModelRenderer";
 
 const ComposedInference = props => {
-    const [model, setModel] = useState(<p><strong>Model</strong></p>);
-    const [payload, setPayload] = useState(<p><strong>Payload</strong></p>);
-
-    useEffect(() => {
-        updateModel();
-        updatePayload();
-    }, []);
-
-    const updateModel = () => {
-        if (props.data.model.accuracy) {
-            setModel(<Classifier data={props.data.model}/>);
-        }
-
-        if (props.data.model.meanSquaredError) {
-            setModel(<Regressor data={props.data.model}/>);
-        }
-    };
-
-    const updatePayload = () => {
-        if (props.data.payload.content) {
-            setPayload(<Text data={props.data.payload}/>);
-        }
-
-        if (props.data.payload.url) {
-            setPayload(<Image data={props.data.payload}/>);
-        }
-    };
-
     return (
         <Card>
             <Card.Body>
@@ -48,7 +18,7 @@ const ComposedInference = props => {
                     <Col>
                         <Card>
                             <Card.Body>
-                                {payload}
+                                <PayloadRenderer data={props.data.payload}/>
                             </Card.Body>
                         </Card>
                     </Col>
@@ -62,7 +32,7 @@ const ComposedInference = props => {
                     <Col>
                         <Card>
                             <Card.Body>
-                                {model}
+                                <ModelRenderer data={props.data.model}/>
                             </Card.Body>
                         </Card>
                     </Col>
