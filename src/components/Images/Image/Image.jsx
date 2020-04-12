@@ -1,11 +1,10 @@
 import React from "react";
+import Payload from "../../Payloads/Payload/Payload";
 
 const Image = props => {
     return (
         <React.Fragment>
-            <p><strong>Image</strong></p>
-            <p>ID: {props.data.id}</p>
-            <p>Size: {props.data.size}kb</p>
+            <Payload data={props.data}/>
             <p>Url: {props.data.url}</p>
         </React.Fragment>
     );
