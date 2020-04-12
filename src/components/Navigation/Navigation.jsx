@@ -10,6 +10,7 @@ const Navigation = props => {
                 <Nav.Link href="/inferences">Inferences</Nav.Link>
                 <Nav.Link href="/persons">Persons</Nav.Link>
                 <Nav.Link href="/models">Models</Nav.Link>
+                <Nav.Link href="/classifiers">Classifiers</Nav.Link>
             </Nav>
         </Navbar>
     );

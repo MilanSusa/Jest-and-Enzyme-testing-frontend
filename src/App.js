@@ -6,12 +6,14 @@ import Home from "./components/Home/Home";
 import ComposedInferences from "./components/ComposedInferences/ComposedInferences";
 import ComposedPersons from "./components/ComposedPersons/ComposedPersons";
 import ComposedModels from "./components/ComposedModels/ComposedModels";
+import ComposedClassifiers from "./components/ComposedClassifiers/ComposedClassifiers";
 
 const App = () => {
     return (
         <div className="App">
             <Layout>
                 <Switch>
+                    <Route path="/classifiers" render={props => <ComposedClassifiers {...props} />}/>
                     <Route path="/models" render={props => <ComposedModels {...props} />}/>
                     <Route path="/persons" render={props => <ComposedPersons {...props} />}/>
                     <Route path="/inferences" render={props => <ComposedInferences {...props} />}/>
