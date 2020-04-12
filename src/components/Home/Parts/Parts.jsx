@@ -12,6 +12,8 @@ const Parts = props => {
                 <Part text="1) Inferences" />
                 <Part text="2) Persons" />
                 <Part text="3) Models" />
+                <Part text="4) Classifiers" />
+                <Part text="5) Regressors" />
             </Container>
         </React.Fragment>
     );

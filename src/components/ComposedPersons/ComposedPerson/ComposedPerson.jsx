@@ -4,8 +4,8 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Person from "../../Persons/Person/Person";
 import Inference from "../../Inferences/Inference/Inference";
-import Model from "../../Models/Model/Model";
-import Payload from "../../Payloads/Payload/Payload";
+import PayloadRenderer from "../../PayloadRenderer/PayloadRenderer";
+import ModelRenderer from "../../ModelRenderer/ModelRenderer";
 
 const ComposedPerson = props => {
     return (
@@ -32,14 +32,14 @@ const ComposedPerson = props => {
                                     <Col>
                                         <Card>
                                             <Card.Body>
-                                                <Payload data={inference.payload}/>
+                                                <PayloadRenderer data={inference.payload}/>
                                             </Card.Body>
                                         </Card>
                                     </Col>
                                     <Col>
                                         <Card>
                                             <Card.Body>
-                                                <Model data={inference.model}/>
+                                                <ModelRenderer data={inference.model}/>
                                             </Card.Body>
                                         </Card>
                                     </Col>
