@@ -11,6 +11,7 @@ const Navigation = props => {
                 <Nav.Link href="/persons">Persons</Nav.Link>
                 <Nav.Link href="/models">Models</Nav.Link>
                 <Nav.Link href="/classifiers">Classifiers</Nav.Link>
+                <Nav.Link href="/regressors">Regressors</Nav.Link>
             </Nav>
         </Navbar>
     );
