@@ -4,8 +4,8 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Person from "../../Persons/Person/Person";
 import Inference from "../../Inferences/Inference/Inference";
-import Model from "../../Models/Model/Model";
 import Payload from "../../Payloads/Payload/Payload";
+import ModelRenderer from "../../ModelRenderer/ModelRenderer";
 
 const ComposedModel = props => {
     return (
@@ -13,7 +13,7 @@ const ComposedModel = props => {
             <Card.Body>
                 <Row>
                     <Col>
-                        <Model data={props.data}/>
+                        <ModelRenderer data={props.data}/>
                     </Col>
                 </Row>
                 <Row>

@@ -5,6 +5,7 @@ const Classifier = props => {
         <React.Fragment>
             <p><strong>Classifier</strong></p>
             <p>ID: {props.data.id}</p>
+            <p>Url: {props.data.url}</p>
             <p>Accuracy: {props.data.accuracy}</p>
             <p>Precision: {props.data.precision}</p>
             <p>Recall: {props.data.recall}</p>
