@@ -19,7 +19,7 @@ describe('<Payload />', () => {
         expect(wrapper.contains(<PayloadTypeRenderer data={{content: "dummy"}}/>)).toEqual(true);
     });
 
-    it('should render PayloadTypeRenderer sub component with url as props', () => {
+    it('should render PayloadTypeRenderer with url as props', () => {
         wrapper.setProps({
             data: {
                 url: "dummy"
