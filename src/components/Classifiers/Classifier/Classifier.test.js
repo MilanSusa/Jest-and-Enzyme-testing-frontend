@@ -10,13 +10,13 @@ describe('<Classifier />', () => {
         wrapper = shallow(<Classifier data={{}}/>);
     });
 
-    it('should render Model with url as props', () => {
+    it('should render Model with accuracy as props', () => {
         wrapper.setProps({
             data: {
-                url: "dummy"
+                accuracy: "dummy"
             }
         });
-        expect(wrapper.contains(<Model data={{url: "dummy"}}/>)).toEqual(true);
+        expect(wrapper.contains(<Model data={{accuracy: "dummy"}}/>)).toEqual(true);
     });
 
     it('should render paragraph with accuracy from props', () => {
