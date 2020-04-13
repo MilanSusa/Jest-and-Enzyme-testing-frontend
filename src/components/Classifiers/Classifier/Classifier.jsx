@@ -1,11 +1,10 @@
 import React from "react";
+import Model from "../../Models/Model/Model";
 
 const Classifier = props => {
     return (
         <React.Fragment>
-            <p><strong>Classifier</strong></p>
-            <p>ID: {props.data.id}</p>
-            <p>Url: {props.data.url}</p>
+            <Model data={props.data}/>
             <p>Accuracy: {props.data.accuracy}</p>
             <p>Precision: {props.data.precision}</p>
             <p>Recall: {props.data.recall}</p>
