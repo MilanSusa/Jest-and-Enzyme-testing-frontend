@@ -31,4 +31,22 @@ describe('<Payload />', () => {
     it('should render PayloadTypeRenderer with empty object as props', () => {
         expect(wrapper.contains(<PayloadTypeRenderer data={{}}/>)).toEqual(true);
     });
+
+    it('should render paragraph with id from props', () => {
+        wrapper.setProps({
+            data: {
+                id: 1
+            }
+        });
+        expect(wrapper.contains(<p>ID: 1</p>)).toEqual(true);
+    });
+
+    it('should render paragraph with size from props', () => {
+        wrapper.setProps({
+            data: {
+                size: 20
+            }
+        });
+        expect(wrapper.contains(<p>Size: 20kb</p>)).toEqual(true);
+    });
 });
