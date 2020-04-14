@@ -7,7 +7,7 @@ const Person = props => {
             <p>ID: {props.data.id}</p>
             <p>First name: {props.data.firstName}</p>
             <p>Last name: {props.data.lastName}</p>
-            <p>Email: {props.data.email}</p>
+            <p>E-mail: {props.data.email}</p>
         </React.Fragment>
     );
 };
