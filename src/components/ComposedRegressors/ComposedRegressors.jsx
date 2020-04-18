@@ -3,7 +3,7 @@ import axios from "axios";
 import Container from "react-bootstrap/Container";
 import ComposedModel from "../ComposedModels/ComposedModel/ComposedModel";
 
-const ComposedRegressors= props => {
+const ComposedRegressors = props => {
     const [models, setModels] = useState([]);
 
     useEffect(() => {

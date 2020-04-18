@@ -1,33 +1,29 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import ComposedPerson from "./ComposedPerson";
 import Person from "../../Persons/Person/Person";
 import Inference from "../../Inferences/Inference/Inference";
 import PayloadRenderer from "../../PayloadRenderer/PayloadRenderer";
 import ModelRenderer from "../../ModelRenderer/ModelRenderer";
+import ComposedModel from "./ComposedModel";
 
-describe('<ComposedPerson />', () => {
+describe('<ComposedModel />', () => {
     let wrapper = null;
 
     beforeEach(() => {
-        wrapper = shallow(<ComposedPerson data={{inferences: []}}/>);
+        wrapper = shallow(<ComposedModel data={{inferences: []}}/>);
     });
 
-    it('should render Person with fields from props', () => {
+    it('should render ModelRenderer with fields from props', () => {
         wrapper.setProps({
             data: {
                 id: 1,
-                firstName: "dummy",
-                lastName: "dummy",
-                email: "dummy@example.com",
+                url: "dummy",
                 inferences: []
             }
         });
-        expect(wrapper.contains(<Person data={{
+        expect(wrapper.contains(<ModelRenderer data={{
             id: 1,
-            firstName: "dummy",
-            lastName: "dummy",
-            email: "dummy@example.com",
+            url: "dummy",
             inferences: []
         }}/>)).toEqual(true);
     });
@@ -73,7 +69,7 @@ describe('<ComposedPerson />', () => {
         expect(wrapper.find(Inference)).toHaveLength(2);
     });
 
-    it('should render one ModelRenderer component if one Inference is present in props', () => {
+    it('should render one Person component if one Inference is present in props', () => {
         wrapper.setProps({
             data: {
                 inferences: [
@@ -84,10 +80,10 @@ describe('<ComposedPerson />', () => {
                 ]
             }
         });
-        expect(wrapper.find(ModelRenderer)).toHaveLength(1);
+        expect(wrapper.find(Person)).toHaveLength(1);
     });
 
-    it('should render one ModelRenderer component for each Inference present in props', () => {
+    it('should render one Person component for each Inference present in props', () => {
         wrapper.setProps({
             data: {
                 inferences: [
@@ -102,7 +98,7 @@ describe('<ComposedPerson />', () => {
                 ]
             }
         });
-        expect(wrapper.find(ModelRenderer)).toHaveLength(2);
+        expect(wrapper.find(Person)).toHaveLength(2);
     });
 
     it('should render one PayloadRenderer component if one Inference is present in props', () => {
