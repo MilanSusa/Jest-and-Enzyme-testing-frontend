@@ -16,7 +16,7 @@ const ComposedPersons = props => {
 
     return (
         <Container>
-            {persons.map(person => <ComposedPerson key={person.id} data={person}/>)}
+            {persons ? persons.map(person => <ComposedPerson key={person.id} data={person}/>) : null}
         </Container>
     );
 };
