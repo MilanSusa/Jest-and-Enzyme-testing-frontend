@@ -16,7 +16,7 @@ const ComposedClassifiers = props => {
 
     return (
         <Container>
-            {models.map(model => <ComposedModel key={model.id} data={model}/>)}
+            {models ? models.map(model => <ComposedModel key={model.id} data={model}/>) : null}
         </Container>
     );
 };
