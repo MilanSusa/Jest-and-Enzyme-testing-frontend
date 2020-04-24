@@ -16,7 +16,7 @@ const ComposedInferences = props => {
 
     return (
         <Container>
-            {inferences.map(inference => <ComposedInference key={inference.id} data={inference}/>)}
+            {inferences ? inferences.map(inference => <ComposedInference key={inference.id} data={inference}/>) : null}
         </Container>
     );
 };
